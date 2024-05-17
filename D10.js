@@ -59,17 +59,36 @@ console.log("ciao sono",me)
 /* ESERCIZIO 1
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
-
+let casualNumber= dice();
+function dice() {
+  return Math.floor(Math.random(0)*6)+1;
+}
+console.log(casualNumber)
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+function whoIsBigger(number1, number2) {  
+  if (number1<number2) {
+    return number2;
+  }
+  else {return number1;
+  }
+}
+console.log(whoIsBigger(27,57))
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
 
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
-
+function splitMe(testo="I love coding") {
+  let array= testo.split(" ")
+  return array
+}
+console.log("nuovo array:", splitMe())
+// const frase= "I love coding"
+// const fraseDivisa= splitMe(frase)
+// console.log("nuova array:", fraseDivisa)
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
