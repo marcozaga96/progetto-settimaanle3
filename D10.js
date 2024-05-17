@@ -86,27 +86,48 @@ function splitMe(testo="I love coding") {
   return array
 }
 console.log("nuovo array:", splitMe())
-// const frase= "I love coding"
-// const fraseDivisa= splitMe(frase)
-// console.log("nuova array:", fraseDivisa)
+
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
-
+function deleteOne(someString="Epicode", someString1= false) {
+  if (someString1=== true) {
+    return someString.slice(1) 
+  }
+  else{
+    return someString.slice(-1)
+  }
+}
+console.log(deleteOne())
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
+function onlyLetters(strnig="I have 4 dogs") {
+  return strnig.replace(4,"")
+}
+console.log(onlyLetters())
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
-
+function isThisAnEmail(email) {
+  if (email) {
+    return true
+  }
+  else{
+    return false
+  }
+}
+console.log(isThisAnEmail("vsdv"))
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+function whatDayIsIt(day= new Date()) {
+  return giornoDellaSettimana= day.getDate()
+} console.log(whatDayIsIt())
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -125,9 +146,29 @@ console.log("nuovo array:", splitMe())
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
+const stringsDate= "2024-05-07"
+const date1= new Date(stringsDate)
+console.log(date1)  
+function howManyDays(today= new Date()) {
+  return result= today.getDate() - date1.getDate()  
+}
+console.log(howManyDays())
+
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+const myBirthday= "1996-12-10"
+const dateBirthday= new Date(myBirthday)
+console.log(dateBirthday)
+function isTodayMyBirthday(today= new Date()) {
+  if (today===dateBirthday) {
+    return true
+  } else {
+    return false
+  }
+}
+console.log(isTodayMyBirthday())
+
 
 // Arrays & Oggetti
 
@@ -137,10 +178,23 @@ console.log("nuovo array:", splitMe())
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
+function deleteProp(object={
+  colorePelle: "chiaro",
+    occhi: "marroni",
+    capelli: "ricci",
+  }, capelli="ricci") {
+   if (object.capelli===capelli) {
+    return object.slice(capelli)
+  }
+} 
+console.log(deleteProp())
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
+function newestMovie() {
+  const allDate= movies.concat(Year)
+}
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
